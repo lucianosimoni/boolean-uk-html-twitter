@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="src/style.css">
     <script src="main.js"></script>
+    <script src="github.js"></script> <!-- Github script -->
 
     <title>Trextter</title>
     <link rel="icon" type="image/x-icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/310/t-rex_1f996.png">
@@ -18,60 +19,71 @@
     <!-- 300 600 350 -->
     <!-- 1250 total -->
     <!-- 24% 48% 28% -->
+    <!-- 280px 1fr 320px -->
 
     <!-- Left side bar -->
     <div class="left-panel">
-        <!-- Logo -->
-        <div class="logo">
-            <a href="index.html"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/310/t-rex_1f996.png" alt=""></a>
+        <!-- Till the action button! -->
+        <div class="top">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/310/t-rex_1f996.png" alt=""></a>
+            </div>
+
+            <div class="icon-button">
+                <i class="material-symbols-outlined">home</i>
+                <span>Home</span>
+            </div>
+
+            <div class="icon-button">
+                <i class="material-symbols-outlined">explore</i>
+                <span>Explore</span>
+            </div>
+            
+            <div class="icon-button">
+                <i class="material-symbols-outlined">circle_notifications</i>
+                <span>Notifications</span>
+            </div>
+
+            <div class="icon-button">
+                <i class="material-symbols-outlined">chat_bubble</i>
+                <span>Messages</span>
+            </div>
+
+            <div class="icon-button">
+                <i class="material-symbols-outlined">stars</i>
+                <span>Bookmarks</span>
+            </div>
+
+            <div class="icon-button">
+                <i class="material-symbols-outlined">list_alt</i>
+                <span>Lists</span>
+            </div>
+
+            <div class="icon-button">
+                <i class="material-symbols-outlined">account_circle</i>
+                <span>Profile</span>
+            </div>
+
+            <div class="icon-button">
+                <i class="material-symbols-outlined">expand_circle_down</i>
+                <span>More</span>
+            </div>
+
+            <div class="action-button large-button">
+                <span>Treet</span>
+            </div>
         </div>
 
+        <!-- Profile Button that sticks to the bottom -->
+        <div class="bottom"> <!-- No need to be grid -->
+            <div class="profile">
 
-        <div class="icon-button">
-            <i class="material-symbols-outlined">home</i>
-            <span>Home</span>
+            </div>
+            <p>😎 My profile <br> @trexOwner</p>
         </div>
 
-        <div class="icon-button">
-            <i class="material-symbols-outlined">explore</i>
-            <span>Explore</span>
-        </div>
         
-        <div class="icon-button">
-            <i class="material-symbols-outlined">circle_notifications</i>
-            <span>Notifications</span>
-        </div>
-
-        <div class="icon-button">
-            <i class="material-symbols-outlined">chat_bubble</i>
-            <span>Messages</span>
-        </div>
-
-        <div class="icon-button">
-            <i class="material-symbols-outlined">stars</i>
-            <span>Bookmarks</span>
-        </div>
-
-        <div class="icon-button">
-            <i class="material-symbols-outlined">list_alt</i>
-            <span>Lists</span>
-        </div>
-
-        <div class="icon-button">
-            <i class="material-symbols-outlined">account_circle</i>
-            <span>Profile</span>
-        </div>
-
-        <div class="icon-button">
-            <i class="material-symbols-outlined">expand_circle_down</i>
-            <span>More</span>
-        </div>
-
-        <div class="action-button">
-            <span>Filled button</span>
-        </div>
-
-        <p>😎 My profile <br> @trexOwner</p>
     </div>
 
     <!-- Page Content -->
@@ -86,6 +98,7 @@
         <p>🦖🦖</p>
         <p>🦖🦖</p>
         <p>Whats happening?</p>
+        <button onclick="signInUser()">sign in with github</button>
     </div>
   </div>
 </body>
