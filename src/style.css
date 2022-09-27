@@ -3,9 +3,16 @@ body {
 }
 
 :root {
-  --mainActionColor: #7965AF;
-  --white: #ffffff;
-  --shadowColor: rgba(0, 0, 0, 0.5);
+  /* Pallete Used:
+  https://coolors.co/386641-6a994e-a7c957-f2e8cf-fffffc-001219 */
+
+  --white: #FFFFFC;
+  --secondWhite: #F2E8CF;
+  --black: #001219;
+  --primaryColor: #6a994e;
+  --secondaryColor: #A7C957;
+  --darkGreen: #386641;
+  --shadowColor: rgba(0, 18, 25, 0.5);
 }
 
 .container {
@@ -15,22 +22,22 @@ body {
 }
 
 .left-panel {
-
+  background-color: var(--white);
 }
 .left-panel img {
   height: 36px;
 }
 
 .content {
-
+  background-color: var(--secondWhite);
 }
 
 .right-panel {
-
+  background-color: var(--white);
 }
 
 .action-button {
-  background-color: var(--mainActionColor);
+  background-color: var(--primaryColor);
   color: var(--white);
   
   width: fit-content;
@@ -50,8 +57,8 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 8px;
-  background-color: var(--mainActionColor);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
 
   width: fit-content;
   padding: 0 24px 0 16px;
