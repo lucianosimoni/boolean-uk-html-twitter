@@ -29,3 +29,5 @@ It was supposed to be something simple... not that simple anymore tho 🙂
 	- *Used the [Google Material Symbols (icons)](https://fonts.google.com/icons) to get my icons. Found it smarter than adding each one with huge links*
  - [x] ~~ Use a local file for the profile image. Research how to use CSS to to make the profile image appear as a circle. 
 	 - *Choose to use [Dice Bear](https://avatars.dicebear.com/) to get my profile pictures 🙂.  Randomizing the profile based on each name.*
+
+![A t-rex image](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/310/t-rex_1f996.png)
