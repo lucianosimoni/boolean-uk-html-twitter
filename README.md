@@ -1,5 +1,4 @@
 # Twitter Clone
-## [My Notes on the project](#my-notes)
 
 For this exercise, we will be building a clone of Twitter:
 
@@ -37,7 +36,3 @@ This will put into practice everything we have learned so far about HTML & CSS. 
     * Get the source for the icon images from the Twitter website as SVG and include them with `svg` tags
     * Use a local file for the profile image. Research how to use CSS to to make the profile image appear as a circle
 
-### <a href="#my-notes">My Notes</a>
-- I used the [TailWindCss](https://tailwindcss.com) as my framework for this project.
-> Installation - [Here](https://tailwindcss.com/docs/installation)
-- Something
