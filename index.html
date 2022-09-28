@@ -21,7 +21,7 @@
     <!-- 280px 1fr 320px -->
 
     <!-- Left side bar -->
-    <div class="left-panel">
+    <div class="left-panel noselect">
         <!-- Till the action button! -->
         <div class="top">
             <!-- Logo -->
@@ -71,15 +71,13 @@
 
         <!-- Profile Button that sticks to the bottom -->
         <div class="bottom"> <!-- No need to be grid -->
-            <div class="profile-button" onclick="openMenu('profile')"> <!-- Is a grid -->
+            <div class="profile-button" onclick="openMenu('accounts-menu')"> <!-- Is a grid -->
                 <img src="https://avatars.dicebear.com/api/adventurer/largaaaawercxz%5Cqwer.svg" alt="Profile Picture">
-                <span id="name">Lucianosimoni</span>
-                <span id="username">@luciano</span>
+                <span class="profile-name">lucianoSimoni</span>
+                <span class="profile-username">@luciano</span>
                 <i class="material-symbols-outlined">more_horiz</i>
             </div>
-        </div>
-
-        
+        </div>        
     </div>
 
     <!-- Page Content -->
@@ -88,15 +86,61 @@
     </div>
 
     <!-- Right Side bar. right:0 sends it to the right -->
-    <div class="right-panel">
-        <p>Search 🔎</p>
-        <p>Whats happening?</p>
-        <p>🦖🦖</p>
-        <p>🦖🦖</p>
-        <p>Whats happening?</p>
-        <button onclick="signInUser()">sign in with github</button>
-        <a href="src/register.html">Register</a>
-        <a href="src/login.html">Login</a>
+    <div class="right-panel"> <!-- Grid 4 rows -->
+        <!-- 4 div stacked vertically -->
+        <div class="search">
+            <div class="search-button" onclick="goTo('home')">
+                <i class="material-symbols-outlined">search</i>
+                <span>Search</span>
+            </div>
+        </div>
+        
+        <div class="whats-happening">
+            <p>Whats happening?</p>
+            <p>🦖🦖</p>
+            <p>🦖🦖</p>
+        </div>
+
+        <div class="who-to-follow">
+            <h3>Who to follow</h3>
+
+            <!-- User 1 -->
+            <div class="profile-button rect-button noselect" onclick="goTo('users/potato')"> <!-- Is a grid -->
+                <img src="https://avatars.dicebear.com/api/adventurer/potato.svg" alt="Profile Picture">
+                <span class="profile-name">potatoRobert</span>
+                <span class="profile-username">@potato</span>
+                <i class="material-symbols-outlined">navigate_next</i>
+            </div>
+            <!-- User 2 -->
+            <div class="profile-button rect-button noselect" onclick="goTo('users/cookies')"> <!-- Is a grid -->
+                <img src="https://avatars.dicebear.com/api/adventurer/cookies.svg" alt="Profile Picture">
+                <span class="profile-name">eRicoK</span>
+                <span class="profile-username">@cookies</span>
+                <i class="material-symbols-outlined">navigate_next</i>
+            </div>
+            <!-- User 3 -->
+            <div class="profile-button rect-button noselect" onclick="goTo('users/beabea')"> <!-- Is a grid -->
+                <img src="https://avatars.dicebear.com/api/adventurer/beabea.svg" alt="Profile Picture">
+                <span class="profile-name">bea123456789</span>
+                <span class="profile-username">@beabea</span>
+                <i class="material-symbols-outlined">navigate_next</i>
+            </div>
+            <!-- User 4 -->
+            <div class="profile-button rect-button noselect" onclick="goTo('users/josiammm')"> <!-- Is a grid -->
+                <img src="https://avatars.dicebear.com/api/adventurer/josiammm.svg" alt="Profile Picture">
+                <span class="profile-name">josiasSaisj</span>
+                <span class="profile-username">@josiammm</span>
+                <i class="material-symbols-outlined">navigate_next</i>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <button onclick="signInUser()">sign in with github</button>
+            <a href="src/register.html">Register</a>
+            <a href="src/login.html">Login</a>
+        </div>
+
     </div>
   </div>
 </body>

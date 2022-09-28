@@ -31,8 +31,6 @@ function registerUser() {
 // Button callers
 function goTo(toPage) {
   // Adds the rest of path to the toPage and then go
-
-
   console.log(`Go to page ${toPage}`)
 }
 
@@ -44,12 +42,16 @@ function openPopup(popupName) {
 }
 
 function openMenu(menuName) {
-  if (menuName === 'profile') {
+  if (menuName === 'accounts-menu') {
     // Show options to logout.
     console.log('Profile menu called (to signout)')
   }
 }
 // ...
+
+function followUser(user) {
+  console.log(`Follow user: ${user}`)
+}
 
 function errorDialog(message) {
   const dialog = document.getElementById('error-dialog')
