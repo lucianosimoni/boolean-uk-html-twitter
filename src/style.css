@@ -2,6 +2,8 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   background-color: var(--secondWhite);
+
+  overflow: hidden;
 }
 
 :root { /* Color Pallete */
@@ -43,7 +45,7 @@ body {
   24% 48% 28% */
 
   display: grid;
-  grid-template-columns: auto 1fr 320px;
+  grid-template-columns: 320px 1fr 450px;
   height: 100vh;
 }
 
@@ -51,11 +53,15 @@ body {
 .left-panel {
   background-color: var(--white);
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto; /* Top and Bottom */
 
   border-radius: 0 20px 20px 0;
+  border-right: 1px solid var(--black);
 
-  padding: 8px 30px 0 40px; /* 8 top, 40 left 30 right */
+  height: auto;
+  overflow: none;
+
+  padding: 8px 30px 8px 40px; /* 8 top and bottom, 40 left 30 right */
 }
 /* ------- TOP */
 .left-panel .top {
@@ -90,35 +96,52 @@ body {
 /* || Right Panel */
 .right-panel {
   background-color: var(--white);
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 18px;
 
   border-radius: 20px 0 0 20px;
+  border-left: 1px solid var(--black);
 
-  padding: 8px 40px 0 30px; /* 8 top, 30 left 40 right */
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  padding: 8px 40px 8px 30px; /* 8 top and bottom, 30 left 40 right */
 }
 
-.who-to-follow {
+.who-to-follow,
+.whats-happening {
   display: grid;
   grid-template-rows: auto;
   grid-gap: 8px;
+
   background-color: var(--secondWhite);
+
   border-radius: 20px;
-  padding-bottom: 12px;
 }
-.who-to-follow h3 { /* Title */
+.who-to-follow .profile-button,
+.whats-happening .news-button {
+  background-color: var(--secondWhite);
+}
+.who-to-follow h3, /* Both titles */
+.whats-happening h3 { /* Title */
   margin: 0;
   padding: 12px 16px;
 
   font-weight: bolder;
   color: var(--black);
 }
-.who-to-follow .profile-button {
-  background-color: var(--secondWhite);
-  color: var(--black);
-  border: 0;
+
+.whats-happening .text-button {
+  width: auto;
+  height: auto;
+  padding: 16px;
+  
+  border-radius: 0 0 20px 20px;
 }
 
 .footer {
-  display: none;
+
 }
 
 /* ... */
@@ -176,32 +199,27 @@ body {
   font-size: 18px;
 }
 
-.filled-button {
-  background-color: var(--white);
+.text-button {
+  background-color: var(--secondWhite);
   color: var(--black);
 
   width: fit-content;
   height: 40px;
   padding: 0 24px 0 16px;
   
-  font-size: large;
-  line-height: 40px;
+  font-size: medium;
+  line-height: auto;
   border-radius: 20px;
 
   transition: 0.2s;
 }
-.filled-button:hover {
+.text-button:hover {
   filter: brightness(92%); /* -8% */
   cursor: pointer;
   box-shadow: var(--shadowColorLight) 0px 1px 5px;
 }
-.filled-button:active { /* Pressed */
+.text-button:active { /* Pressed */
   filter: brightness(88%); /* -12% */
-}
-
-.large-button {
-  padding: 8px 90px;
-  border-radius: 50px;
 }
 
 .profile-button {
@@ -211,7 +229,8 @@ body {
   grid-template: 
   "img name more" auto
   "img username more" auto /
-  auto auto auto;
+  60px auto auto;
+  grid-gap: 8px;
   
   width: fit-content;
   height: 64px;
@@ -250,16 +269,73 @@ body {
 .profile-button .material-symbols-outlined { /* the MORE btn */
   grid-area: more;
   display: flex;
-  align-items: center;
+  align-self: center;
+  justify-self: flex-end;
   margin-left: 8px;
+  width: fit-content;
 }
 
-/* Being used in the lists on the Right menu */
-.vlist-item {
+.news-button {
+  background-color: var(--white);
+  color: var(--black);
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template: 
+  "page img" auto
+  "title img" auto /
+  auto auto;
+
+  width: auto;
+  padding: 12px 24px;
+
+  font-size: large;
+
+  transition: 0.2s;
+}
+.news-button:hover {
+  filter: brightness(92%); /* -8% */
+  cursor: pointer;
+  box-shadow: var(--shadowColorDark) 0px 1px 5px;
+}
+.news-button:active {
+  filter: brightness(88%); /* -12% */
+}
+.news-button .news-page { /* World News - Today */
+  grid-area: page;
+  margin: 0;
+  
+  display: flex;
+  align-items: flex-end;
+
+  font-size: small;
+}
+.news-button .news-title { /* Russias's........ */
+  grid-area: title;
+  margin: 0;
+
+  font-size: medium;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+.news-button img { /* user picture */
+  grid-area: img;
+  height: 68px;
+  width: 68px;
+  object-fit: cover;
+
+  margin-left: 12px;
+
+  border-radius: 16px;
+  box-shadow: var(--shadowColorLight) 0px 1px 5px;
+
+  display: flex;
+  align-self: center;
+  justify-self: right;
 }
 
+.large-button {
+  padding: 8px 90px;
+  border-radius: 50px;
+}
 .rect-button {
   border-radius: 0;
   width: auto;
@@ -267,4 +343,8 @@ body {
 .rect-button .material-symbols-outlined { /* The button Icon */
   justify-content: end;
 }
+.bottom-rect-button {
+  border-radius: 0 0 20px 20px;
+}
+
 /* ... */
