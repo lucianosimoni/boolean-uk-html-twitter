@@ -23,7 +23,7 @@ It was supposed to be something simple... not that simple anymore tho 🙂
 
 **Extension Criteria**
 
- - [ ] Make the layout responsive so that the side-bars are removed on lower resolution devices
+ - [x] Make the layout responsive so that the side-bars are removed on lower resolution devices
  - [x] Include images using the `img` and `svg` tags.
  - [x] ~~ Get the source for the icon images from the Twitter website as SVG and include them with `svg` tags.
 	- *Used the [Google Material Symbols (icons)](https://fonts.google.com/icons) to get my icons. Found it smarter than adding each one with huge links*
