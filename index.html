@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/310/t-rex_1f996.png">
 </head>
 <body>
-  <div class="container luci-light-grey">
+  <div class="container">
     <!-- 300 600 350 -->
     <!-- 1250 total -->
     <!-- 24% 48% 28% -->
@@ -29,37 +29,37 @@
                 <a href="index.html"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/310/t-rex_1f996.png" alt=""></a>
             </div>
 
-            <div class="icon-button" onclick="goTo('home')">
+            <div class="icon-text-button" onclick="goTo('home')">
                 <i class="material-symbols-outlined">home</i>
                 <span>Home</span>
             </div>
 
-            <div class="icon-button" onclick="goTo('explore')">
+            <div class="icon-text-button" onclick="goTo('explore')">
                 <i class="material-symbols-outlined">explore</i>
                 <span>Explore</span>
             </div>
             
-            <div class="icon-button" onclick="goTo('notifications')">
+            <div class="icon-text-button" onclick="goTo('notifications')">
                 <i class="material-symbols-outlined">circle_notifications</i>
                 <span>Notifications</span>
             </div>
 
-            <div class="icon-button" onclick="goTo('messages')">
+            <div class="icon-text-button" onclick="goTo('messages')">
                 <i class="material-symbols-outlined">chat_bubble</i>
                 <span>Messages</span>
             </div>
 
-            <div class="icon-button" onclick="goTo('bookmarks')">
+            <div class="icon-text-button" onclick="goTo('bookmarks')">
                 <i class="material-symbols-outlined">stars</i>
                 <span>Bookmarks</span>
             </div>
 
-            <div class="icon-button" onclick="goTo('lists')">
+            <div class="icon-text-button" onclick="goTo('lists')">
                 <i class="material-symbols-outlined">list_alt</i>
                 <span>Lists</span>
             </div>
 
-            <div class="icon-button" onclick="goTo('profile')">
+            <div class="icon-text-button" onclick="goTo('profile')">
                 <i class="material-symbols-outlined">account_circle</i>
                 <span>Profile</span>
             </div>
@@ -80,8 +80,55 @@
         </div>        
     </div>
 
+    <div class="left-panel-compact noselect">
+        <div class="top-compact">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/microsoft/310/t-rex_1f996.png" alt=""></a>
+            </div>
+
+            <div class="icon-button" onclick="goTo('home')">
+                <i class="material-symbols-outlined">home</i>
+            </div>
+
+            <div class="icon-button" onclick="goTo('explore')">
+                <i class="material-symbols-outlined">explore</i>
+            </div>
+            
+            <div class="icon-button" onclick="goTo('notifications')">
+                <i class="material-symbols-outlined">circle_notifications</i>
+            </div>
+
+            <div class="icon-button" onclick="goTo('messages')">
+                <i class="material-symbols-outlined">chat_bubble</i>
+            </div>
+
+            <div class="icon-button" onclick="goTo('bookmarks')">
+                <i class="material-symbols-outlined">stars</i>
+            </div>
+
+            <div class="icon-button" onclick="goTo('lists')">
+                <i class="material-symbols-outlined">list_alt</i>
+            </div>
+
+            <div class="icon-button" onclick="goTo('profile')">
+                <i class="material-symbols-outlined">account_circle</i>
+            </div>
+
+            <div class="action-button circle-icon-button" onclick="openPopup('treet')">
+                <i class="material-symbols-outlined">send</i>
+            </div>
+        </div>
+
+        <div class="bottom-compact"> <!-- No need to be grid -->
+            <div class="profile-button" onclick="openMenu('accounts-menu')"> <!-- Is a grid -->
+                <img src="https://avatars.dicebear.com/api/adventurer/largaaaawercxz%5Cqwer.svg" alt="Profile Picture">
+            </div>
+        </div>   
+    </div>
+
     <!-- Page Content -->
-    <div class="content">
+    <div class="main">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta pariatur, enim nesciunt nostrum a blanditiis facere velit maxime aut rem voluptate animi nisi neque incidunt! Quos recusandae unde commodi odit.</p>
     </div>
 
