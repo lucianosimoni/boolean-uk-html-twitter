@@ -13,6 +13,7 @@ body {
   --white: #FFFFFC;
   --secondWhite: #F2E8CF;
   --black: #001219;
+  --grey: #434343;
   --primaryColor: #6a994e;
   --secondaryColor: #A7C957;
   --darkGreen: #386641;
@@ -73,8 +74,6 @@ body {
   position: relative;
   left: 6px;
 }
-
-Compact left menu
 
 .left-panel .bottom { /* BOTTOM */
   display: flex;
@@ -147,7 +146,7 @@ Compact left menu
   background-color: var(--white);
   display: grid;
   grid-template-rows: auto;
-  grid-gap: 18px;
+  gap: 18px;
 
   border-radius: 20px 0 0 20px;
   border-left: 1px solid var(--black);
@@ -155,14 +154,43 @@ Compact left menu
   overflow-y: scroll;
   overflow-x: hidden;
 
+  align-content: start; /* PERFECT ALIGNED 🤌🤌 */
+
   padding: 8px 40px 8px 30px; /* 8 top and bottom, 30 left 40 right */
+}
+
+.search {
+  height: fit-content;
+}
+.search-bar {
+  width: 100%;
+  height: 40px;
+  
+  background-color: var(--secondWhite);
+  
+  border: 2px solid var(--secondWhite);
+  border-radius: 50px;
+  padding: 8px 16px;
+  padding-left: 48px;
+  outline: none;
+}
+.search-bar:focus {
+  background-color: var(--white);
+
+  border: 2px solid var(--primaryColor);
+}
+.search-icon {
+  position: absolute;
+  top: 16px;
+  right: 378px;
+  color: var(--grey);
 }
 
 .who-to-follow,
 .whats-happening {
   display: grid;
   grid-template-rows: auto;
-  grid-gap: 8px;
+  gap: 8px;
 
   background-color: var(--secondWhite);
 
@@ -188,6 +216,25 @@ Compact left menu
   
   border-radius: 0 0 20px 20px;
 }
+
+/* MAIN */
+.main {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+.main h2 {
+  position: relative;
+  top: -60px;
+}
+.main .header {
+  filter: blur(4px);
+  background-color: rebeccapurple;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* MAIN END */
 
 .footer {
 
@@ -221,7 +268,7 @@ Compact left menu
 .icon-text-button {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 8px;
+  gap: 8px;
   background-color: var(--white);
   color: var(--black);
 
@@ -306,7 +353,7 @@ Compact left menu
   "img name more" auto
   "img username more" auto /
   60px auto auto;
-  grid-gap: 8px;
+  gap: 8px;
   
   width: fit-content;
   height: 64px;
@@ -464,6 +511,9 @@ Compact left menu
 @media screen and (max-width: 1095px) {
   .container { /* Root Grid */
     grid-template-columns: 100px 1fr 350px; /* updates the right panel size */
+  }
+  .search-icon {
+    right: 278px;
   }
 }
 
