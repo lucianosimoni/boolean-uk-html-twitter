@@ -156,11 +156,20 @@ body {
 
   align-content: start; /* PERFECT ALIGNED 🤌🤌 */
 
-  padding: 8px 40px 8px 30px; /* 8 top and bottom, 30 left 40 right */
+  padding: 0 35px 8px 25px; /* -5px on sides cause element on right panel have margin of 5px*/
 }
 
 .search {
-  height: fit-content;
+  /* Stick it to the top when scrolled */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
+  padding: 8px 5px;
+
+  background-color: var(--white);
+
+  z-index: 1001; /* Show over other elements */
 }
 .search-bar {
   width: 100%;
@@ -181,8 +190,8 @@ body {
 }
 .search-icon {
   position: absolute;
-  top: 16px;
-  right: 378px;
+  top: 16px; /* 8+8 */
+  left: 23px; /* 18+5 */
   color: var(--grey);
 }
 
@@ -195,6 +204,8 @@ body {
   background-color: var(--secondWhite);
 
   border-radius: 20px;
+
+  margin: 0 5px; /* Sides */
 }
 .who-to-follow .profile-button,
 .whats-happening .news-button {
@@ -217,6 +228,10 @@ body {
   border-radius: 0 0 20px 20px;
 }
 
+.footer {
+
+}
+
 /* MAIN */
 .main {
   display: grid;
@@ -232,13 +247,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
 /* MAIN END */
-
-.footer {
-
-}
 
 /* ... */
 /* || Reusable Classes */
@@ -511,9 +520,6 @@ body {
 @media screen and (max-width: 1095px) {
   .container { /* Root Grid */
     grid-template-columns: 100px 1fr 350px; /* updates the right panel size */
-  }
-  .search-icon {
-    right: 278px;
   }
 }
 
