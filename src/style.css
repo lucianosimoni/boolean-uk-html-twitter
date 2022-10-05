@@ -235,18 +235,75 @@ body {
 /* MAIN */
 .main {
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: auto 1fr;
+  overflow-y: scroll;
 }
-.main h2 {
-  position: relative;
-  top: -60px;
-}
+
 .main .header {
-  filter: blur(4px);
-  background-color: rebeccapurple;
+  /* filter: blur(4px); */
+  backdrop-filter: blur(5px);
+  position: sticky;
+  position: -webkit-sticky;
+
   margin: 0;
   padding: 0;
 }
+.main h2 {
+}
+
+.main-content-grid { /* All posts */
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.content { /* Each post */
+  display: grid;
+  grid-template-columns: 60px auto;
+  padding: 16px;
+  gap: 8px;
+  
+  width: 600px;
+  height: fit-content;
+
+  background-color: var(--white);
+}
+.content img {
+  width: 60px;
+}
+.content .right {
+  display: grid;
+  justify-content: left;
+  grid-template-rows: repeat(3, auto);
+  gap: 8px;
+}
+.user-details {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 8px;
+  justify-content: left;
+}
+.user-details .profile-name {
+  font-weight: bold;
+}
+.user-details .profile-username,
+.user-details .post-timeby {
+  font-weight: lighter;
+  color: var(--darkGreen);
+}
+
+.content-post {
+
+}
+
+.content-buttons {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: stretch;
+}
+.content i {
+  width: fit-content;
+}
+
 /* MAIN END */
 
 /* ... */
