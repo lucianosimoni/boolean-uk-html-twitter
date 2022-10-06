@@ -320,11 +320,10 @@ body {
   display: grid;
   grid-template-rows: auto; /* Top and Bottom */
 
-  border-radius: 0 20px 20px 0;
-  border-right: 1px solid var(--black);
+  border-radius: 0 20px 20px 0; /* Right Radius */
 
   height: auto;
-  overflow: none;
+  overflow: hidden;
 
   padding: 8px 30px 8px 40px; /* 8 top and bottom, 40 left 30 right */
 }
@@ -530,30 +529,35 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   overflow-y: scroll;
-
-  background-color: var(--secondWhite);
 }
 .main::-webkit-scrollbar {
   /* Hide scrollbar for Chrome, Safari and Opera */
   display: none;
 }
 .main .header {
-  /* filter: blur(4px); */
+  display: flex;
   backdrop-filter: blur(5px);
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
 
+  width: 600px;
+  height: 50px;
+
+  font-weight: bolder;
+  font-size: x-large;
+  align-items: center;
+  
   margin: 0;
-  padding: 0;
+  padding: 0 16px;
 }
 
 /* Do a Treex */
 .treex /* Create a post section */ {
   display: grid;
   grid-template-columns: 60px auto;
-  padding: 16px;
   gap: 8px;
   
+  margin-top: 50px;
+  padding: 16px;
   border-bottom: 1px solid var(--black);
 
   width: auto;
