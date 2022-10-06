@@ -210,31 +210,6 @@ body {
 .profile-button:active {
   filter: brightness(88%); /* -12% */
 }
-.profile-button img { /* user picture */
-  grid-area: img;
-  height: 60px;
-  display: flex;
-  align-self: center;
-}
-.profile-button .profile-name { /* luciano simoni */
-  grid-area: name;
-  font-size: medium;
-  position: relative;  
-  top: 10px;
-}
-.profile-button .profile-username { /* @lucian.oh */
-  grid-area: username;
-  font-size: small;
-  position: relative;  
-}
-.profile-button .material-symbols-outlined { /* the MORE btn */
-  grid-area: more;
-  display: flex;
-  align-self: center;
-  justify-self: flex-end;
-  margin-left: 8px;
-  width: fit-content;
-}
 
 .news-button {
   background-color: var(--white);
@@ -373,7 +348,31 @@ body {
 
   margin-bottom: 8px;
 }
-
+.left-panel .profile-button img { /* user picture */
+  grid-area: img;
+  height: 60px;
+  display: flex;
+  align-self: center;
+}
+.left-panel .profile-button .profile-name { /* luciano simoni */
+  grid-area: name;
+  font-size: medium;
+  position: relative;  
+  top: 10px;
+}
+.left-panel .profile-button .profile-username { /* @lucian.oh */
+  grid-area: username;
+  font-size: small;
+  position: relative;  
+}
+.left-panel .profile-button .material-symbols-outlined { /* the MORE btn */
+  grid-area: more;
+  display: flex;
+  align-self: center;
+  justify-self: flex-end;
+  margin-left: 8px;
+  width: fit-content;
+}
 .left-panel-compact {
   background-color: var(--white);
   display: none;
