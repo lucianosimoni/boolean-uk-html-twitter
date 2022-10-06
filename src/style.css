@@ -441,6 +441,12 @@ body {
 .icon-xlarge {
   font-size: x-large;
 }
+/* Changed by JavaScript when like pressed */
+.liked {
+  color: var(--highlightRed);
+  font-variation-settings:
+  'FILL' 1
+}
 
 .highlight-blue:hover {
   background-color: var(--highlightBlueLowOp);

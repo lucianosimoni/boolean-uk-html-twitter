@@ -56,3 +56,17 @@ function followUser(user) {
 function errorDialog(message) {
   const dialog = document.getElementById('error-dialog')
 }
+//
+
+// Like change State
+const likeBtn = document.getElementById("like")
+let likeBtnPressed = false
+likeBtn.onclick = () => {
+  if (likeBtnPressed) {
+    likeBtn.classList.remove('liked')
+    likeBtnPressed = false
+  } else {
+    likeBtn.classList.add('liked')
+    likeBtnPressed = true
+  }
+}
