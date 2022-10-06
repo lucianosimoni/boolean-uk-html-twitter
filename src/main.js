@@ -58,20 +58,23 @@ function errorDialog(message) {
 }
 //
 
-// Like change State
-// const likeBtn = document.getElementById("like")
-// let likeBtnPressed = false
-// likeBtn.onclick = () => {
-//   if (likeBtnPressed) {
-//     likeBtn.classList.remove('liked')
-//     likeBtnPressed = false
-//   } else {
-//     likeBtn.classList.add('liked')
-//     likeBtnPressed = true
-//   }
-// }
-
+// Cool thing using toggle for the Like btn
 function changeState(element) {
   console.log('Like has been pressed.')
   element.classList.toggle("liked")
+}
+
+// Disable or enable Treex button based on this input
+const treex = document.getElementById("treex")
+function treexInputChanged(element) {
+  console.log(element.value)
+  if (element.value !== "") {
+    // Activate Treex
+    treex.classList.remove("disabled")
+    console.log("Value not empty")
+  } else {
+    // Disable Treex
+    treex.classList.add("disabled")
+    console.log("Value empty")
+  }
 }

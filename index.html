@@ -134,15 +134,21 @@
         <div class="treex">
             <img class="noselect" src="https://avatars.dicebear.com/api/adventurer/mkmksdf.svg">
             <div class="right-content">
-                <input type="text" placeholder="What's happening?">
+                <input oninput="treexInputChanged(this)" type="text" placeholder="What's happening?">
 
                 <div class="content-buttons noselect">
-                    <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">imagesmode</i>
-                    <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">gif_box</i>
-                    <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">bar_chart</i>
-                    <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">sentiment_satisfied</i>
-                    <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">event</i>
-                    <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">location_on</i>
+                    <div> <!-- Buttons -->
+                        <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">imagesmode</i>
+                        <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">gif_box</i>
+                        <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">bar_chart</i>
+                        <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">sentiment_satisfied</i>
+                        <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">event</i>
+                        <i class="icon-button icon-xlarge material-symbols-outlined icon-not-filled">location_on</i>
+                    </div>
+                    <div id="treex" class="disabled text-button noselect">
+                        <span>Treex</span>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -198,7 +204,7 @@
                         </div> -->
                     </div>
                 </div>
-            </div>
+            </div>       
         </div>
     </div>
 
@@ -268,7 +274,7 @@
                 <i class="material-symbols-outlined">navigate_next</i>
             </div>
             <!-- User 4 -->
-            <div class="profile-button rect-button bottom-rect-button noselect" onclick="goTo('users/josiammm')"> <!-- Is a grid -->
+            <div class="profile-button rect-button bottom-radius-normal noselect" onclick="goTo('users/josiammm')"> <!-- Is a grid -->
                 <img src="https://avatars.dicebear.com/api/adventurer/josiammm.svg" alt="Profile Picture">
                 <span class="profile-name">josiasSaisj</span>
                 <span class="profile-username">@josiammm</span>
