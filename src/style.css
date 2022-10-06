@@ -684,18 +684,19 @@ body {
 }
 
 /* Types of post */
-.post-content-text { /* What the person acctually tweets */
-
+.post-content-text p { /* What the person acctually tweets */
+  margin: 0;
 }
-.post-content-image {
-
+.post-content-image img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 12px;
 }
 .post-content-video {
 
 }
 
 /* MAIN END */
-
 
 /* MEDIA QUERIES */
 /* Twitter media queries */
@@ -724,13 +725,17 @@ body {
   }
 }
 
-/* 950 right menu hidden */
+/* 950 right menu hidden and BorderRight to main */
 @media screen and (max-width: 1055px) {
   .container {
     grid-template-columns: 100px 600px; /* Removes the right panel completilly*/
   }
   .right-panel { /* Removes it */
     display: none;
+  }
+
+  .main {
+    border-right: 1px solid var(--black);
   }
 }
 
