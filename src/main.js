@@ -59,14 +59,19 @@ function errorDialog(message) {
 //
 
 // Like change State
-const likeBtn = document.getElementById("like")
-let likeBtnPressed = false
-likeBtn.onclick = () => {
-  if (likeBtnPressed) {
-    likeBtn.classList.remove('liked')
-    likeBtnPressed = false
-  } else {
-    likeBtn.classList.add('liked')
-    likeBtnPressed = true
-  }
+// const likeBtn = document.getElementById("like")
+// let likeBtnPressed = false
+// likeBtn.onclick = () => {
+//   if (likeBtnPressed) {
+//     likeBtn.classList.remove('liked')
+//     likeBtnPressed = false
+//   } else {
+//     likeBtn.classList.add('liked')
+//     likeBtnPressed = true
+//   }
+// }
+
+function changeState(element) {
+  console.log('Like has been pressed.')
+  element.classList.toggle("liked")
 }
