@@ -17,9 +17,16 @@ body {
   --primaryColor: #6a994e;
   --secondaryColor: #A7C957;
   --darkGreen: #386641;
+  
+  --highlightRed: #ff006e;
+  --highlightGreen: #06d6a0;
+  --highlightBlue: #3a86ff;
+  --highlightRedLowOp: #ff006f2b;
+  --highlightGreenLowOp: #06d6a02b;
+  --highlightBlueLowOp: #3a86ff2b;
+
   --shadowColorLight: rgba(0, 18, 25, 0.3);
   --shadowColorDark: rgba(0, 18, 25, 0.5);
-  --transparent: rgba(0, 0, 0, 0.0)
 }
 
 .noselect {
@@ -254,7 +261,6 @@ body {
   /* Hide scrollbar for Chrome, Safari and Opera */
   display: none;
 }
-
 .main .header {
   /* filter: blur(4px); */
   backdrop-filter: blur(5px);
@@ -264,7 +270,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .main-content-grid { /* All posts grid */
   display: grid;
   grid-template-rows: auto;
@@ -437,14 +442,17 @@ body {
   font-size: x-large;
 }
 
-.highlight-blue {
-
+.highlight-blue:hover {
+  background-color: var(--highlightBlueLowOp);
+  color: var(--highlightBlue);
 }
-.highlight-green {
-
+.highlight-green:hover {
+  background-color: var(--highlightGreenLowOp);
+  color: var(--highlightGreen);
 }
-.highlight-red {
-
+.highlight-red:hover {
+  background-color: var(--highlightRedLowOp);
+  color: var(--highlightRed);
 }
 
 
