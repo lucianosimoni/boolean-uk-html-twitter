@@ -66,15 +66,17 @@ function changeState(element) {
 
 // Disable or enable Treex button based on this input
 const treex = document.getElementById("treex")
+
 function treexInputChanged(element) {
-  console.log(element.value)
-  if (element.value !== "") {
-    // Activate Treex
+  if (element.value !== "") { // Activate Treex
     treex.classList.remove("disabled")
-    console.log("Value not empty")
-  } else {
-    // Disable Treex
+  } else { // Disable Treex
     treex.classList.add("disabled")
-    console.log("Value empty")
   }
+  growTreexInput(element) // Resize rows
+}
+function growTreexInput(element) {
+  element.style.height = "5px"
+  console.log(element.style.height)
+  element.style.height = (element.scrollHeight)+"px"
 }
