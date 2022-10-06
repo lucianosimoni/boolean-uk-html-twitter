@@ -39,6 +39,10 @@ body {
   'GRAD' 0,
   'opsz' 48
 }
+.icon-not-filled {
+  font-variation-settings:
+  'FILL' 0
+}
 
 /* Is the Main container (not very responsive) */
 .container { /* Root Grid */
@@ -183,7 +187,7 @@ body {
   border-radius: 50px;
   padding: 8px 16px;
   padding-left: 48px;
-  outline: none;
+  outline: none; /* Removes the focus border */
 }
 .search-bar:focus {
   background-color: var(--white);
@@ -231,13 +235,13 @@ body {
 }
 
 .footer {
-
+  color: var(--grey);
 }
 
 /* MAIN */ 
 .main { /* ID MAIN*/
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   
   /* Scroll bar */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -260,15 +264,13 @@ body {
   margin: 0;
   padding: 0;
 }
-.main h2 {
-}
 
-.main-content-grid { /* All posts */
+.main-content-grid { /* All posts grid */
   display: grid;
   grid-template-rows: auto;
 }
 
-.content { /* Each post */
+.treex /* Create a post section */ {
   display: grid;
   grid-template-columns: 60px auto;
   padding: 16px;
@@ -279,31 +281,63 @@ body {
 
   background-color: var(--white);
 }
-.content img {
+.treex input { /* Text Input */
+  font-size: larger;
+  border: none;
+  padding: 12px 0;
+
+  outline: none; /* Removes the focus border */
+}
+.treex .right-content {
+  display: grid;
+  justify-content: left;
+  grid-template-rows: repeat(3, auto);
+  gap: 12px;
+}
+
+.post { /* Each post */
+  display: grid;
+  grid-template-columns: 60px auto;
+  padding: 16px;
+  gap: 8px;
+  
+  width: auto;
+  height: fit-content;
+
+  background-color: var(--white);
+}
+.post img {
   width: 60px;
 }
-.content .right {
+.post .right-content {
   display: grid;
   justify-content: left;
   grid-template-rows: repeat(3, auto);
   gap: 8px;
 }
-.user-details {
+.post .user-details {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 8px;
   justify-content: left;
 }
-.user-details .profile-name {
+.post .user-details .profile-name {
   font-weight: bold;
 }
-.user-details .profile-username,
-.user-details .post-timeby {
+.post .user-details .profile-username,
+.post .user-details .post-timeby {
   font-weight: lighter;
   color: var(--darkGreen);
 }
 
-.content-post { /* What the person acctually tweets */
+/* Types of post */
+.post-content-text { /* What the person acctually tweets */
+
+}
+.post-content-image {
+
+}
+.post-content-video {
 
 }
 
@@ -399,6 +433,20 @@ body {
   font-size: 30px;
   align-items: center;
 }
+.icon-xlarge {
+  font-size: x-large;
+}
+
+.highlight-blue {
+
+}
+.highlight-green {
+
+}
+.highlight-red {
+
+}
+
 
 .text-button {
   background-color: var(--secondWhite);
