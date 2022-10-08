@@ -305,7 +305,6 @@ body {
 .container { /* Root Grid */
   /* ~300px 1fr ~320px
   24% 48% 28% */
-
   display: grid;
   grid-template-columns: 320px 600px 450px;
   height: 100vh;
@@ -582,6 +581,118 @@ body {
   margin: 0;
   padding: 0 16px;
 }
+/* Mobile */
+.main .mobile-header { /* Only displayed in mobile media querie */
+  display: none;
+  box-sizing: border-box;
+
+  z-index: 2;
+
+  /* display: grid; ON IN MOBILE ONLY */
+  grid-auto-flow: column;
+  width: 100%;
+
+  background-color: var(--white);
+  padding: 8px;
+
+  position: fixed;
+
+  justify-items: center; /*Centers logo div*/
+  align-items: center;
+}
+.main .mobile-header .left {
+  justify-self: left;
+}
+.main .mobile-header .right {
+  justify-self: right;
+}
+.main .mobile-header img { /* Logo */
+  height: 36px;
+}
+
+.main .mobile-fab {
+  display: none;
+  /* display: flex; ONLY IN MOBILE */
+  position: fixed;
+  box-sizing: border-box;
+
+  background-color: var(--primaryColor);
+
+  border-radius: 16px;
+  height: 56px;
+  width: 56px;
+
+  box-shadow: var(--shadowColorLight) 0px 1px 5px;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2;
+  right: 16px;
+  bottom: 76px;
+}
+.main .mobile-fab i { /* Icon */
+  font-size: 24px;
+  background-color: transparent;
+  padding: 0;
+
+  color: var(--white);
+
+  
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 1000;
+}
+
+/* NAV = Home | Search | Audio | Notifications | Inbox */
+.main .mobile-nav-bar {
+  display: none;
+  /* display: grid; ONLY IN MOBILE */
+  grid-auto-flow: column;
+  gap: 8px;
+
+  justify-items: center;
+  
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  padding: 12px 0 16px 0;
+
+  background-color: var(--white);
+}
+.main .mobile-nav-bar .nav-button { /* Touchable button */
+  width: minmax(48px, auto);
+  display: flex;
+  align-content: center;
+}
+.main .mobile-nav-bar .nav-button i { /* Icon */
+  display: flex;
+
+  width: 64px;
+  height: 32px;
+  font-size: 24px;
+
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 16px;
+  background-color: var(--white);
+
+  font-variation-settings: 'FILL' 0;
+  transition: 0.2s;
+}
+.main .mobile-nav-bar .nav-button .active-icon { /* Menu filled */
+  font-variation-settings: 'FILL' 1;
+}
+.main .mobile-nav-bar .nav-button:active i { /* When nav-button pressed: */
+  filter: brightness(88%);
+}
+
+
+
+/* End of Mobile features */
 
 /* Do a Treex */
 .treex /* Create a post section */ {
@@ -741,8 +852,6 @@ body {
   font-variation-settings:
   'FILL' 1
 }
-
-
 /* MAIN END */
 
 /* MEDIA QUERIES */
@@ -787,12 +896,38 @@ body {
 }
 
 /* 600 full mobile */
+/* HEADER OK = Profile Icon OK | Logo OK | More OK */
+/* MAIN = No margin OK, Floating Add button, No Treex on top OK */
+/* NAV = Home | Search | Audio | Notifications | Inbox */
 @media screen and (max-width: 705px) {
   .container {
     grid-template-columns: 1fr;
+    width: 100vw; /* No white spaces on the side */
   }
 
-  .left-panel-compact {
+  .left-panel-compact { /* Remove left panel */
     display: none;
   }
+  .main .header { /* Remove Menu Header */
+    display: none;
+  }
+  .treex { /* Removes the Treex */
+    display: none;
+  }
+
+  .main .mobile-header {
+    display: grid;
+  }
+  .main .mobile-fab {
+    display: flex;
+  }
+  .main .mobile-nav-bar {
+    display: grid;
+  }
+
+  .main-content-grid { /* To not be behind topNav*/
+    margin-top: 56px;
+  }
+
+
 }
