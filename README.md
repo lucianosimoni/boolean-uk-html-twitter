@@ -1,6 +1,6 @@
 # *Trextter* - A [Twitter](twitter.com) clone.
 
-> 😎 Check how the project is [here](https://lucianosimoni.github.io/html-twitter-challenge/ 👈
+> 😎 Check how the project is [https://lucianosimoni.github.io/html-twitter-challenge/](here) 👈
  
 The project name is the mix between the word T-rex and Twitter (cool right? 😁).
 It was supposed to be something simple... not that simple anymore tho 🙂
