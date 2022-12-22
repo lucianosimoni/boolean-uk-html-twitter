@@ -1,82 +1,50 @@
-let users = [
-  {
-    username : 'potato',
-    password : '1234'
-  }
-]
-
-function loginUser() {
-  console.log('Log user')
-}
-
-function registerUser() {
-  console.log('Register user')
-  const username = document.getElementById('r-uname').value
-  const password = document.getElementById('r-pass').value
-
-  if (!username.length > 13) {
-    // Add user if username not more than 13 char
-    users.push(
-      {
-        'username' : username,
-        'password' : password
-      }
-    )
-  } else {
-    errorDialog('Username should have 13 char only.')
-  }
-  
-}
-
 // Button callers
 function goTo(toPage) {
   // Adds the rest of path to the toPage and then go
-  console.log(`Go to page ${toPage}`)
+  window.alert(
+    `Website has no real functionalities:\n
+    \nAction would take you to: ${toPage}`
+  );
 }
 
 function openPopup(popupName) {
-  if (popupName === 'treet') {
-    // show the treet popup
-    console.log('Treet called')
+  if (popupName === "treet") {
+    window.alert(
+      `Website has no real functionalities:\n
+      \nAction would create a new Treet (tweet)`
+    );
   }
 }
 
 function openMenu(menuName) {
-  if (menuName === 'accounts-menu') {
-    // Show options to logout.
-    console.log('Profile menu called (to signout)')
+  if (menuName === "accounts-menu") {
+    window.alert(
+      `Website has no real functionalities:\n
+      \nAction would open the menu action (logout and stuff)`
+    );
   }
 }
-// ...
-
-function followUser(user) {
-  console.log(`Follow user: ${user}`)
-}
-
-function errorDialog(message) {
-  const dialog = document.getElementById('error-dialog')
-}
-//
 
 // Cool thing using toggle for the Like btn
 function changeState(element) {
-  console.log('Like has been pressed.')
-  element.classList.toggle("liked")
+  element.classList.toggle("liked");
 }
 
 // Disable or enable Treex button based on this input
-const treex = document.getElementById("treex")
+const treex = document.getElementById("treex");
 
 function treexInputChanged(element) {
-  if (element.value !== "") { // Activate Treex
-    treex.classList.remove("disabled")
-  } else { // Disable Treex
-    treex.classList.add("disabled")
+  if (element.value !== "") {
+    // Activate Treex
+    treex.classList.remove("disabled");
+  } else {
+    // Disable Treex
+    treex.classList.add("disabled");
   }
-  growTreexInput(element) // Resize rows
+  growTreexInput(element); // Resize rows
 }
+
 function growTreexInput(element) {
-  element.style.height = "5px"
-  console.log(element.style.height)
-  element.style.height = (element.scrollHeight)+"px"
+  element.style.height = "5px";
+  element.style.height = element.scrollHeight + "px";
 }
