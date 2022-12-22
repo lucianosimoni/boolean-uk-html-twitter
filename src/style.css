@@ -686,6 +686,7 @@ body {
   width: minmax(48px, auto);
   display: flex;
   align-content: center;
+  cursor: pointer;
 }
 .main .mobile-nav-bar .nav-button i {
   /* Icon */
