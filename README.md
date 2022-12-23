@@ -15,6 +15,8 @@ _Trextter_ uses a combination of **HTML**, **CSS** and **JavaScript**, all to sh
 - [**Dice Bear**](https://avatars.dicebear.com/)
   - Generates random **svg** face drawings. Used as profile pictures.
 
+[result](result.gif)
+
 ## Assesment Criteria - Boolean
 
 - [x] Layout the main page elements (left-hand menu, tweet feed and right side-bar) using CSS Grid. CSS Grid should also be used to layout individual tweets.
