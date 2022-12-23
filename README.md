@@ -15,7 +15,7 @@ _Trextter_ uses a combination of **HTML**, **CSS** and **JavaScript**, all to sh
 - [**Dice Bear**](https://avatars.dicebear.com/)
   - Generates random **svg** face drawings. Used as profile pictures.
 
-[result](result.gif)
+![result](result.gif)
 
 ## Assesment Criteria - Boolean
 
